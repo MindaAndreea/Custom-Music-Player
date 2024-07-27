@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Music Player</title>
     <link rel="stylesheet" href="/up/css/styling.css" />
+    <script
+      src="https://kit.fontawesome.com/55fb0d6d0f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <script src="/script.js"></script>
+    <div class="wrapper">
+      <div class="wrapper-top">
+        <i class="fa-solid fa-chevron-down"></i>
+        <span>Now Playing</span>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div class="wrapper-image">
+        <img src="" alt="" />
+      </div>
+      <div class="wrapper-song">
+        <p class="wrapper-song-name"></p>
+        <p class="wrapper-song-artist"></p>
+      </div>
+      <div class="wrapper-progress">
+        <div class="wrapper-progress-bar">
+          <audio src="" id="main-audio"></audio>
+        </div>
+        <div class="wrapper-progress-time">
+          <span class="wrapper-bottom-time-current">0:00</span>
+          <span class="wrapper-bottom-time-max">0:00</span>
+        </div>
+      </div>
+      <div class="wrapper-bottom">
+        <i class="fa-solid fa-repeat"></i>
+        <i class="fa-solid fa-backward-step"></i>
+        <i class="fa-regular fa-circle-play"></i>
+        <i class="fa-solid fa-forward-step"></i>
+        <i class="fa-solid fa-music"></i>
+      </div>
+    </div>
+    <script src="/javascript/script.js"></script>
   </body>
 </html>

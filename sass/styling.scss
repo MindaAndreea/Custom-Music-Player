@@ -138,40 +138,46 @@ ul li {
       font-size: 35px;
       color: var(--color-pink);
     }
+
+    .icon-playing {
+      color: var(--color-pink);
+    }
+
+    .icon-paused {
+      color: var(--color-lightblack);
+    }
   }
 
   &-music-list {
     position: absolute;
-    background: var(--white);
+    background: var(--color-white);
     width: 100%;
     left: 0;
     bottom: -55%;
     opacity: 0;
     pointer-events: none;
-    z-index: 5;
+    z-index: 10;
     padding: 15px 30px;
     border-radius: 15px;
     box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.15s ease-out;
 
     .header {
-      .left {
-        display: flex;
-        align-items: center;
-        font-size: 19px;
+      font-size: 19px;
+      width: 380px;
 
-        span {
-          font-size: 22px;
-        }
+      span {
+        font-size: 22px;
+      }
 
-        i {
-          cursor: default;
-          margin-right: 10px;
-        }
+      i {
+        cursor: default;
+        margin-right: 10px;
       }
 
       #close {
         font-size: 22px;
+        cursor: pointer;
       }
     }
 
@@ -179,8 +185,12 @@ ul li {
       margin: 10px 0;
       max-height: 260px;
       overflow: auto;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
 
       li {
+        width: 200px;
         list-style: none;
         display: flex;
         cursor: pointer;
@@ -192,10 +202,25 @@ ul li {
         .audio-duration {
           font-size: 16px;
         }
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          width: calc(100% - 50px);
+        }
       }
 
       li:last-child {
         border-bottom: 0;
+      }
+
+      .status {
+        font-size: 14px;
+        color: var(--color-pink);
+
+        &-hidden {
+          display: none;
+        }
       }
     }
 
@@ -206,6 +231,10 @@ ul li {
     ul li.playing {
       pointer-events: none;
       color: var(--violet);
+
+      .status {
+        content: "Playing";
+      }
     }
   }
 

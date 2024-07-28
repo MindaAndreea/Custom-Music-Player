@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Music Player</title>
+    <link rel="icon" href="/images/icon.jpg" />
     <link rel="stylesheet" href="/up/css/styling.css" />
     <script
       src="https://kit.fontawesome.com/55fb0d6d0f.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sen:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -18,29 +25,46 @@
         <i class="fa-solid fa-ellipsis"></i>
       </div>
       <div class="wrapper-image">
-        <img src="" alt="" />
+        <img src="/images/music-1.jpg" alt="" />
       </div>
       <div class="wrapper-song">
-        <p class="wrapper-song-name"></p>
-        <p class="wrapper-song-artist"></p>
+        <p class="wrapper-song-name">Beauz & Jvna - Crazy</p>
+        <p class="wrapper-song-artist">Beauz & Jvna</p>
       </div>
       <div class="wrapper-progress">
         <div class="wrapper-progress-bar">
           <audio src="" id="main-audio"></audio>
         </div>
-        <div class="wrapper-progress-time">
-          <span class="wrapper-bottom-time-current">0:00</span>
-          <span class="wrapper-bottom-time-max">0:00</span>
+        <div class="wrapper-progress-timer">
+          <span class="wrapper-bottom-timer-current">0:00</span>
+          <span class="wrapper-bottom-timer-max">3:20</span>
         </div>
       </div>
       <div class="wrapper-bottom">
-        <i class="fa-solid fa-repeat"></i>
-        <i class="fa-solid fa-backward-step"></i>
-        <i class="fa-regular fa-circle-play"></i>
-        <i class="fa-solid fa-forward-step"></i>
-        <i class="fa-solid fa-music"></i>
+        <i
+          class="fa-solid fa-repeat"
+          title="Playlist Looped"
+          id="repeatIcon"
+        ></i>
+        <i class="fa-solid fa-backward-step" id="previousIcon"></i>
+        <div class="playPause">
+          <i class="fa-regular fa-circle-play" id="playPauseIcon"></i>
+        </div>
+        <i class="fa-solid fa-forward-step" id="nextIcon"></i>
+        <i class="fa-solid fa-music" id="playlistIcon"></i>
+      </div>
+      <div class="wrapper-music-list">
+        <div class="header">
+          <div class="left">
+            <i class="fa-solid fa-music"></i>
+            <span>Music List</span>
+          </div>
+          <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+        <ul class="music-playlist"></ul>
       </div>
     </div>
     <script src="/javascript/script.js"></script>
+    <script src="/javascript/musicList.js"></script>
   </body>
 </html>

@@ -128,7 +128,7 @@ repeatBtn.addEventListener("click", () => {
       break;
     case "repeat_one":
       repeatBtn.classList.replace("fa-repeat", "fa-random");
-      repeatBtn.setAttribute("title", "Playback Shuffled");
+      repeatBtn.setAttribute("title", "Playlist Shuffled");
       break;
     case "shuffle":
       repeatBtn.classList.replace("fa-random", "fa-rotate");
